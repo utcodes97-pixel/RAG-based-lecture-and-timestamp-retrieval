@@ -1,0 +1,22 @@
+[
+    {
+        "start": 0.0,
+        "end": 3.5,
+        "text": " Now you want to write in HTML3 greater than 4."
+    },
+    {
+        "start": 3.5,
+        "end": 5.0,
+        "text": " Okay, I want to write this."
+    },
+    {
+        "start": 5.0,
+        "end": 8.700000000000001,
+        "text": " If you want to try to write this, I will show you the preview of HTML3."
+    },
+    {
+        "start": 8.700000000000001,
+        "end": 11.0,
+        "text": " So this 3 is greater than 4."
+    }
+]
