@@ -1,7 +1,7 @@
 import whisper
 import json
 import os
-model=whisper.load_model("base")   #large-v2 is better here but base will do the job and it has comparatively less size than v2
+model=whisper.load_model("base")   #large-v2 is better here but base will do the job and it has comparatively less size than large-v2
 result=model.transcribe(audio="audios/14 _three is greater than four.mp3",
                         language="hi",
                         task="translate",
