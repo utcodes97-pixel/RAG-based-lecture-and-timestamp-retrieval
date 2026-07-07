@@ -1,0 +1,24 @@
+import whisper
+import json
+import os
+model=whisper.load_model("base")   #large-v2 is better here but base will do the job and it has comparatively less size than v2
+result=model.transcribe(audio="audios/14 _three is greater than four.mp3",
+                        language="hi",
+                        task="translate",
+                        word_timestamps=False)
+print(result)
+   #    print(result['segments'])
+# now review format of output
+#print(os.listdir("audios")) to match file name
+# segments me start end and text hai
+# i wamt these three in my chunk
+chunks=[] #initialising a list
+for segment in result['segments']:
+    chunks.append({"start":segment['start'],"end":segment['end'],"text":segment['text']})
+print(chunks)
+with open("output2.json" , "w") as f:
+    json.dump(chunks,f)
+
+#now output2.json will have structured output after formatting we can see easily start end and text 
+# audio to chunk is very computatinally heavy all playlist might cost hours to days
+
